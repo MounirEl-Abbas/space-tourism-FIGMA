@@ -1,0 +1,23 @@
+/* Sidemenu */
+#menu-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.sidemenu {
+  transform: translateX(100vw);
+  border: 2px solid red;
+  width: 40%;
+  max-width: 50rem;
+  transition: transform 0.3s linear;
+  position: fixed;
+  right: 0;
+  height: 100%;
+
+  &-open {
+    transform: translateX(0);
+  }
+}

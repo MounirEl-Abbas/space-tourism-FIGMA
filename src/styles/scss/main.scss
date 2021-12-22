@@ -58,7 +58,7 @@ h5 {
   letter-spacing: 2.35px;
   font-size: 1.4rem;
 }
-nav {
+.navigation {
   font-family: $ff-barlow;
   font-size: 1.6rem;
   letter-spacing: 2.7px;
@@ -69,6 +69,8 @@ p {
   line-height: 1.5;
   font-weight: 500;
 }
+
+@import "./components/navigation/navigation";
 
 /* Pages */
 // .destination-page {

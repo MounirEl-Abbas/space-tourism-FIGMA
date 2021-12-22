@@ -1,0 +1,33 @@
+/* Navigation */
+.nav-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.current-page {
+  color: red;
+}
+
+@import "./partials/navbar", "./partials/sidemenu";
+
+@media (min-width: 768px) {
+  #menu-btn {
+    display: none;
+  }
+  .sidemenu {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .navigation ul span {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation ul span {
+    display: inline-block;
+  }
+}
