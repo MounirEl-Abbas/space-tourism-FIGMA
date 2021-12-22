@@ -31,22 +31,22 @@ h4 {
 }
 
 h1 {
-  font-size: 15rem;
+  font-size: 8rem;
 }
 h2 {
-  font-size: 10rem;
+  font-size: 5rem;
 }
 h3 {
-  font-size: 5.6rem;
+  font-size: 4rem;
 }
 h4 {
-  font-size: 3.2rem;
+  font-size: 2rem;
 }
 h5 {
-  font-size: 2.8rem;
-  font-family: $ff-barlow;
-  letter-spacing: 4.75px;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: $ff-barlow-condensed;
+  letter-spacing: 3px;
+  color: $light-blue;
 }
 /* Sub-headings */
 .subheading-lg {
@@ -54,20 +54,20 @@ h5 {
   font-family: 2.8rem;
 }
 .subheading-sm {
-  font-family: $ff-barlow;
+  font-family: $ff-barlow-condensed;
   letter-spacing: 2.35px;
   font-size: 1.4rem;
 }
 .navigation {
-  font-family: $ff-barlow;
+  font-family: $ff-barlow-condensed;
   font-size: 1.6rem;
   letter-spacing: 2.7px;
 }
 p {
-  font-family: $ff-belle;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-weight: 500;
+  font-family: $ff-barlow;
+  font-size: 1.4rem;
+  font-weight: 100;
+  color: $light-blue;
 }
 
 @import "./components/navigation/navigation";
@@ -79,3 +79,44 @@ p {
 // }
 // .technology-page {
 // }
+
+#logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 9;
+}
+
+@import "./components/home/home";
+
+@media (min-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+//Desktops
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+//Large desktop
+@media (min-width: 2560px) {
+  html {
+    font-size: 22px;
+  }
+}
+//3k+
+@media (min-width: 3200px) {
+  html {
+    font-size: 26px;
+  }
+}

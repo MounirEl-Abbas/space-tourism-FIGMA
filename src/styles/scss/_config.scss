@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@300;400&family=Bellefair&display=swap");
 
 $ff-belle: "Bellefair", serif;
-$ff-barlow: "Barlow Condensed", sans-serif;
-
+$ff-barlow-condensed: "Barlow Condensed", sans-serif;
+$ff-barlow: "Barlow", sans-serif;
 $dark-blue: #0b0d17;
 $light-blue: #d0d6f9;
 $white: #fff;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

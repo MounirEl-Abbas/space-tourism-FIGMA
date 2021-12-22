@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@300;400&family=Bellefair&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,26 +33,26 @@ h4 {
 }
 
 h1 {
-  font-size: 15rem;
+  font-size: 8rem;
 }
 
 h2 {
-  font-size: 10rem;
+  font-size: 5rem;
 }
 
 h3 {
-  font-size: 5.6rem;
+  font-size: 4rem;
 }
 
 h4 {
-  font-size: 3.2rem;
+  font-size: 2rem;
 }
 
 h5 {
-  font-size: 2.8rem;
+  font-size: 1.4rem;
   font-family: "Barlow Condensed", sans-serif;
-  letter-spacing: 4.75px;
-  font-weight: 500;
+  letter-spacing: 3px;
+  color: #d0d6f9;
 }
 
 /* Sub-headings */
@@ -74,10 +74,10 @@ h5 {
 }
 
 p {
-  font-family: "Bellefair", serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-weight: 500;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 100;
+  color: #d0d6f9;
 }
 
 /* Navigation */
@@ -85,6 +85,7 @@ p {
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 9;
 }
 
 .current-page {
@@ -104,7 +105,7 @@ p {
 /* Sidemenu */
 #menu-btn {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: 2rem;
   cursor: pointer;
   z-index: 9;
@@ -147,3 +148,172 @@ p {
 }
 
 /* Pages */
+#logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 9;
+}
+
+#page-container {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  background: url("../../assets/home/background-home-mobile.jpg") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+}
+
+.home > div {
+  z-index: 2;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10%;
+}
+
+.home article {
+  width: 80%;
+  text-align: center;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.home article h5 {
+  font-weight: 100;
+}
+
+.home article p {
+  line-height: 1.75;
+}
+
+.home .btn-container button {
+  width: 15rem;
+  height: 15rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+  border-radius: 50%;
+  border: none;
+  padding-top: 5px;
+  letter-spacing: 1px;
+  position: relative;
+  cursor: pointer;
+}
+
+.home .btn-container button:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  border-radius: 50%;
+  left: -5rem;
+  margin: auto;
+  width: 25rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .home {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  .home article {
+    height: 50%;
+    margin-bottom: 2rem;
+  }
+  .home article h1 {
+    font-size: 10rem;
+  }
+  .home article p {
+    font-size: 1rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .home > div {
+    width: 80%;
+    height: 70%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1600px;
+    padding: 0;
+  }
+  .home > div article {
+    text-align: left;
+    width: 40%;
+    height: 60%;
+    margin: 0;
+  }
+  .home > div article h5 {
+    font-size: 1.6rem;
+    letter-spacing: 7px;
+  }
+  .home > div article p {
+    width: 90%;
+    margin: 0;
+  }
+  .home > div .btn-container {
+    width: 30%;
+    text-align: right;
+  }
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 3200px) {
+  html {
+    font-size: 26px;
+  }
+}
