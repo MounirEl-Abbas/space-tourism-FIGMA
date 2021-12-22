@@ -67,7 +67,7 @@ h5 {
   font-size: 1.4rem;
 }
 
-nav {
+.navigation {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.6rem;
   letter-spacing: 2.7px;
@@ -78,6 +78,72 @@ p {
   font-size: 1.2rem;
   line-height: 1.5;
   font-weight: 500;
+}
+
+/* Navigation */
+.nav-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.current-page {
+  color: red;
+}
+
+/* Navbar */
+.navbar {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  border: 1px solid red;
+}
+
+/* Sidemenu */
+#menu-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.sidemenu {
+  transform: translateX(100vw);
+  border: 2px solid red;
+  width: 40%;
+  max-width: 50rem;
+  transition: transform 0.3s linear;
+  position: fixed;
+  right: 0;
+  height: 100%;
+}
+
+.sidemenu-open {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  #menu-btn {
+    display: none;
+  }
+  .sidemenu {
+    display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .navigation ul span {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation ul span {
+    display: inline-block;
+  }
 }
 
 /* Pages */
