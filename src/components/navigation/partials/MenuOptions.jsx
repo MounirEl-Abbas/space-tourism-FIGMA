@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useAppContext } from "../../../context";
 
 const MenuOptions = () => {
-  const [currentPage, setCurrentPage] = useState("home");
+  const { currentPage, changePage } = useAppContext();
 
-  const changePage = e => {
-    const page = e.currentTarget.getAttribute("name");
-    setCurrentPage(page);
-  };
   return (
     <ul>
       <li
