@@ -70,6 +70,14 @@ p {
   color: $light-blue;
 }
 
+ul {
+  list-style: none;
+
+  li {
+    cursor: pointer;
+  }
+}
+
 @import "./components/navigation/navigation";
 
 /* Pages */

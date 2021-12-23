@@ -12,3 +12,9 @@ $white: #fff;
   align-items: center;
   justify-content: center;
 }
+
+@mixin glass-effect {
+  background-color: rgba($color: #aaa, $alpha: 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}

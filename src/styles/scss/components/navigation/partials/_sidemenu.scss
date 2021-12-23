@@ -8,16 +8,36 @@
 }
 
 .sidemenu {
+  @include glass-effect;
   transform: translateX(100vw);
-  border: 2px solid red;
-  width: 40%;
-  max-width: 50rem;
+  width: 60%;
+  max-width: 25rem;
   transition: transform 0.3s linear;
   position: fixed;
   right: 0;
   height: 100%;
 
+  ul {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    li {
+      margin: 1rem 0 1rem 1rem;
+      padding: 0.5rem;
+      text-transform: uppercase;
+
+      span {
+        font-weight: bold;
+        margin: 0 1rem;
+      }
+    }
+  }
+
   &-open {
     transform: translateX(0);
+  }
+  .current-page {
+    border-right: 3px solid $white;
   }
 }
