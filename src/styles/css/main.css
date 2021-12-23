@@ -113,13 +113,33 @@ p {
 
 .sidemenu {
   transform: translateX(100vw);
-  border: 2px solid red;
-  width: 40%;
-  max-width: 50rem;
+  width: 60%;
+  max-width: 25rem;
   transition: transform 0.3s linear;
   position: fixed;
   right: 0;
   height: 100%;
+  background-color: rgba(170, 170, 170, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+.sidemenu ul {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.sidemenu ul li {
+  padding: 1.5rem;
+  text-transform: uppercase;
+}
+
+.sidemenu ul li span {
+  font-weight: bold;
+  margin: 0 1rem;
 }
 
 .sidemenu-open {
