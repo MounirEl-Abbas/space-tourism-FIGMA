@@ -14,10 +14,6 @@ const Destination = () => {
     setDestination(destinationSelected);
   }, [currentDestination]);
 
-  useEffect(() => {
-    if (!Object.keys(destination).length) return;
-    console.log(`destination`, destination);
-  }, [destination]);
   return (
     <>
       {Object.keys(destination).length ? (
