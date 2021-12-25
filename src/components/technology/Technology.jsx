@@ -18,12 +18,12 @@ const Technology = () => {
   return (
     <>
       {Object.keys(technology).length ? (
-        <section>
-          <h5>Space Launch 101</h5>
+        <div className="technology-page page">
+          <h5 className="subheading-sm">Space Launch 101</h5>
           <picture>
             <source
               media="(min-width: 1440px)"
-              srcset={technology.images.portrait}
+              srcSet={technology.images.portrait}
             />
             <img src={technology.images.landscape} alt="" />
           </picture>
@@ -35,13 +35,13 @@ const Technology = () => {
                 </li>
               ))}
             </ul>
-            <div>
-              <h5>The Technology...</h5>
-              <h1>{technology.name}</h1>
-              <p>{technology.description}</p>
+            <div id="technology-info">
+              <h5 className="subheading-sm">The Terminology...</h5>
+              <h2 className="subheading-lg">{technology.name}</h2>
+              <p className="page-description">{technology.description}</p>
             </div>
           </div>
-        </section>
+        </div>
       ) : (
         <h2>Loading...</h2>
       )}

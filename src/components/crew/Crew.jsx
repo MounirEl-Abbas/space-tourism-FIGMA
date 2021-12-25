@@ -14,8 +14,8 @@ const Crew = () => {
   return (
     <>
       {Object.keys(crewMember).length ? (
-        <section>
-          <h5>Meet your crew</h5>
+        <div className="crew-page page">
+          <h5 className="subheading-sm">Meet your crew</h5>
           <figure>
             <img src={crewMember.images.webp} alt="" />
           </figure>
@@ -30,13 +30,13 @@ const Crew = () => {
                 );
               })}
             </ul>
-            <div>
-              <h5>{crewMember.role}</h5>
-              <h1>{crewMember.name}</h1>
-              <p>{crewMember.bio}</p>
+            <div id="crew-info">
+              <h5 className="subheading-lg">{crewMember.role}</h5>
+              <h2 className="subheading-lg">{crewMember.name}</h2>
+              <p className="page-description">{crewMember.bio}</p>
             </div>
           </div>
-        </section>
+        </div>
       ) : (
         <h2>Loading...</h2>
       )}
