@@ -48,21 +48,7 @@ h5 {
   letter-spacing: 3px;
   color: $light-blue;
 }
-/* Sub-headings */
-.subheading-lg {
-  font-family: $ff-belle;
-  font-family: 2.8rem;
-}
-.subheading-sm {
-  font-family: $ff-barlow-condensed;
-  letter-spacing: 2.35px;
-  font-size: 1.4rem;
-}
-.navigation {
-  font-family: $ff-barlow-condensed;
-  font-size: 1.6rem;
-  letter-spacing: 2.7px;
-}
+
 p {
   font-family: $ff-barlow;
   font-size: 1.4rem;
@@ -77,16 +63,27 @@ ul {
     cursor: pointer;
   }
 }
+/* Sub-headings */
+.subheading-lg {
+  font-family: $ff-belle;
+  font-family: 2.6rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.subheading-sm {
+  font-family: $ff-barlow-condensed;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.navigation {
+  font-family: $ff-barlow-condensed;
+  font-size: 1.6rem;
+  letter-spacing: 2.7px;
+}
 
 @import "./components/navigation/navigation";
-
-/* Pages */
-// .destination-page {
-// }
-// .crew-page {
-// }
-// .technology-page {
-// }
 
 #logo {
   position: absolute;
@@ -99,8 +96,7 @@ ul {
 
 @import "./components/home/home";
 
-@import "./components/destination/destination", "./components/crew/crew",
-  "./components/technology/technology";
+@import "./components/pages/pages";
 
 @media (min-width: 480px) {
   html {

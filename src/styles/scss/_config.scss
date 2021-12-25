@@ -18,3 +18,9 @@ $white: #fff;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
 }
+
+%barlow-condensed-blue {
+  font-family: $ff-barlow-condensed;
+  text-transform: uppercase;
+  color: $light-blue;
+}
