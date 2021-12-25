@@ -9,7 +9,7 @@ const Destination = () => {
   useEffect(() => {
     const { destinations } = data;
     const destinationSelected = destinations.find(
-      destination => destination.name.toLowerCase() === currentDestination
+      destination => destination.name === currentDestination
     );
     setDestination(destinationSelected);
   }, [currentDestination]);
@@ -25,18 +25,11 @@ const Destination = () => {
           <div>
             <div>
               <ul>
-                <li onClick={e => changeDestination(e)} name="moon">
-                  Moon
-                </li>
-                <li onClick={e => changeDestination(e)} name="mars">
-                  Mars
-                </li>
-                <li onClick={e => changeDestination(e)} name="europa">
-                  Europa
-                </li>
-                <li onClick={e => changeDestination(e)} name="titan">
-                  Titan
-                </li>
+                {data.destinations.map(dest => (
+                  <li onClick={e => changeDestination(e)} name={dest.name}>
+                    {dest.name}
+                  </li>
+                ))}
               </ul>
             </div>
             <h1>{destination.name}</h1>
