@@ -5,6 +5,8 @@
   top: 0;
   right: 0;
   width: 60%;
+  z-index: 7;
+
   &::after {
     content: "";
     background: rgba(255, 255, 255, 0.04);
@@ -60,10 +62,9 @@
     margin-top: 1rem;
   }
   .nav-container {
-    position: absolute;
+    position: relative;
     top: 2rem;
     height: calc(100% - 2rem);
-    z-index: 1;
   }
 
   .navbar {

@@ -99,6 +99,9 @@ ul {
 
 @import "./components/home/home";
 
+@import "./components/destination/destination", "./components/crew/crew",
+  "./components/technology/technology";
+
 @media (min-width: 480px) {
   html {
     font-size: 12px;
