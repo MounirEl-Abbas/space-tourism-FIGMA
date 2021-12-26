@@ -18,36 +18,48 @@ const Destination = () => {
     <>
       {Object.keys(destination).length ? (
         <div className="destination-page page">
-          <header>
-            <h5 className="subheading-sm">
+          <header className="page-header">
+            <h5>
               <span>01</span>Pick your destination
             </h5>
+          </header>
+
+          <main>
             <figure>
               <img src={destination.images.webp} alt={` ${destination.name}`} />
             </figure>
-          </header>
 
-          <section>
-            <ul>
-              {data.destinations.map(dest => (
-                <li onClick={e => changeDestination(e)} name={dest.name}>
-                  {dest.name}
-                </li>
-              ))}
-            </ul>
-            <h2 className="subheading-lg">{destination.name}</h2>
-            <p className="page-description">{destination.description}</p>
-            <div id="destination-info">
-              <article>
-                <h5 className="subheading-sm">Avg. Distance</h5>
-                <p className="subheading-lg">{destination.distance}</p>
-              </article>
-              <article>
-                <h5 className="subheading-sm">Est. Travel Time</h5>
-                <p className="subheading-lg">{destination.travel}</p>
-              </article>
-            </div>
-          </section>
+            <section>
+              <ul className="subheading-bc-b">
+                {data.destinations.map(dest => (
+                  <li
+                    className={`${
+                      currentDestination === dest.name
+                        ? "current-destination"
+                        : ""
+                    }`}
+                    onClick={e => changeDestination(e)}
+                    name={dest.name}>
+                    {dest.name}
+                  </li>
+                ))}
+              </ul>
+              <div className="page-info">
+                <h2>{destination.name}</h2>
+                <p>{destination.description}</p>
+                <div>
+                  <article>
+                    <h5 className="subheading-bc-b">Avg.Distance</h5>
+                    <p className="subheading-b-w">{destination.distance}</p>
+                  </article>
+                  <article>
+                    <h5 className="subheading-bc-b">Est. Travel Time</h5>
+                    <p className="subheading-b-w">{destination.travel}</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </main>
         </div>
       ) : (
         <h2>Loading...</h2>

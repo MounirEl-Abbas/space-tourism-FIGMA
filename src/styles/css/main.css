@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow:wght@300;400&family=Bellefair&display=swap");
-.destination-page section ul, .destination-page #destination-info article h5 {
-  font-family: "Barlow Condensed", sans-serif;
-  text-transform: uppercase;
-  color: #d0d6f9;
-}
+/* 
+tech ^
+avg.distance
+ 
 
+crew COMMANDER = belle, white
+384400 km
+
+
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -389,141 +393,340 @@ ul li {
   }
 }
 
-.page {
-  text-align: center;
-  padding: 1rem;
+/* Similarities between pages (Destination, Crew, Technology) */
+.page-header {
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
-.page-description {
-  line-height: 1.7;
-  width: 80%;
-  margin: auto;
-  max-width: 60rem;
-}
-
-.crew-page img {
-  width: 100%;
-}
-
-.crew-page #crew-info h5 {
-  letter-spacing: 1px;
+.page-header h5 {
+  font-size: 1.4rem;
   color: #fff;
-  opacity: 0.7;
+  font-weight: 100;
 }
 
-.crew-page #crew-info h2 {
-  font-size: 2rem;
-  letter-spacing: 1px;
+.page-header span {
+  opacity: 0.5;
+  padding-right: 0.8rem;
 }
 
-.technology-page img {
-  width: 100%;
+.page-info {
+  font-family: "Bellefair", serif;
 }
 
-.technology-page #technology-info h5 {
-  letter-spacing: 2px;
+.page-info h2 {
+  text-transform: uppercase;
 }
 
-.destination-page {
+.page-info > p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.subheading-bc-b {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.subheading-b-w {
+  font-family: "Bellefair", serif;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.page {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 80rem;
-  padding-top: 2rem;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
 }
 
-.destination-page header {
+.page .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
+.page main {
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20%;
+}
+
+.page figure,
+.page picture {
   width: 100%;
 }
 
-.destination-page header h5 {
-  height: 10%;
-  color: #fff;
-}
-
-.destination-page header h5 span {
-  padding-right: 1rem;
-  opacity: 0.5;
-}
-
-.destination-page header figure {
-  height: 75%;
-}
-
-.destination-page header img {
-  width: 18rem;
-  height: 18rem;
+.page figure img:not(#tech-pic),
+.page picture img:not(#tech-pic) {
+  width: 50%;
+  height: 100%;
   object-fit: contain;
+}
+
+.page figure #tech-pic,
+.page picture #tech-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page section {
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page ul {
+  margin: 0 auto;
+  height: 10%;
+  align-self: flex-start;
+  display: flex;
+}
+
+.page .page-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* Unique to Destination Page */
+.destination-page {
+  height: 120vh;
+}
+
+.destination-page .page-header {
+  height: 12%;
+  align-items: flex-end;
+}
+
+.destination-page main {
+  height: 85%;
+}
+
+.destination-page figure {
+  height: 40%;
 }
 
 .destination-page section {
   height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
-.destination-page section ul {
-  display: flex;
-  margin: 0 auto;
-  width: 80%;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-  height: 20%;
-  max-width: 30rem;
+.destination-page .page-info {
+  height: 90%;
 }
 
-.destination-page section h2 {
+.destination-page .page-info h2 {
   height: 15%;
 }
 
-.destination-page section .page-description {
+.destination-page .page-info p {
   height: 40%;
 }
 
-.destination-page #destination-info {
+.destination-page .page-info div {
   position: relative;
-  height: 45%;
+  height: 40%;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
+  justify-content: space-around;
 }
 
-.destination-page #destination-info::before {
+.destination-page .page-info div::before {
   content: "";
-  position: absolute;
-  width: 95%;
   height: 1px;
-  background-color: #383b4b;
-  left: 0;
-  top: -0.5rem;
-  right: 0;
+  width: 90%;
   margin: auto;
-  opacity: 0.8;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  left: 0;
+  background-color: #979797;
+  opacity: 0.7;
 }
 
-.destination-page #destination-info article {
+.destination-page .page-info div article {
+  height: 35%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 50%;
+  justify-content: space-around;
 }
 
-.destination-page #destination-info article h5 {
+.destination-page .page-info div article h5 {
   font-size: 1.4rem;
 }
 
-.destination-page #destination-info article p {
-  margin-top: 1.1rem;
+.destination-page .page-info div article p {
+  font-size: 2.5rem;
+}
+
+.destination-page ul {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  max-width: 30rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.destination-page ul li {
+  height: 80%;
+}
+
+.destination-page ul .current-destination {
+  border-bottom: 3px solid #fff;
   color: #fff;
-  font-size: 2.4rem;
+}
+
+/* Unique to Crew Page */
+.crew-page {
+  position: relative;
+}
+
+.crew-page::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.crew-page header,
+.crew-page main {
+  z-index: 2;
+}
+
+.crew-page figure {
+  height: 45%;
+  position: relative;
+}
+
+.crew-page figure::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #979797;
+  opacity: 0.2;
+  height: 2px;
+}
+
+.crew-page section {
+  height: 50%;
+  justify-content: flex-start;
+}
+
+.crew-page ul {
+  height: 20%;
+}
+
+.crew-page .page-info {
+  height: 75%;
+}
+
+.crew-page .page-info h5 {
+  opacity: 0.6;
   letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.crew-page .page-info h2 {
+  font-size: 2.5rem;
+}
+
+.crew-page ul {
+  width: 40%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.crew-page ul li {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: gray;
+  opacity: 0.5;
+}
+
+.crew-page ul .current-crew {
+  background-color: #fff;
+  opacity: 1;
+}
+
+/* Unique to Technology Page */
+.technology-page figure {
+  height: 35%;
+}
+
+.technology-page section {
+  height: 60%;
+}
+
+.technology-page .page-info {
+  height: 80%;
+}
+
+.technology-page .page-info h5 {
+  opacity: 0.6;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.technology-page .page-info h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  height: 20%;
+}
+
+.technology-page .page-info p {
+  height: 60%;
+}
+
+.technology-page ul {
+  height: 20%;
+  width: 65%;
+  justify-content: space-evenly;
+}
+
+.technology-page ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: solid 2px gray;
+  opacity: 0.5;
+  font-family: "Bellefair", serif;
+  font-size: 2rem;
+}
+
+.technology-page ul .current-technology {
+  opacity: 1;
+  background-color: #fff;
+  color: black;
+  border-width: 0px;
 }
 
 /* Handle background image changes */
@@ -554,53 +757,6 @@ ul li {
   .technology-page {
     background-image: url("../../assets/technology/background-technology-tablet.jpg");
   }
-  .destination-page {
-    padding-top: 5rem;
-    justify-content: center;
-  }
-  .destination-page header {
-    justify-content: space-around;
-    height: 40%;
-  }
-  .destination-page header figure {
-    height: 80%;
-  }
-  .destination-page header figure img {
-    height: 100%;
-    width: 100%;
-  }
-  .destination-page header h5 {
-    text-align: left;
-    padding-left: 1rem;
-  }
-  .destination-page section {
-    height: 55%;
-    justify-content: space-evenly;
-  }
-  .destination-page section .page-description {
-    font-size: 1rem;
-    height: 20%;
-    margin: 0 auto;
-  }
-  .destination-page #destination-info {
-    height: 20%;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .destination-page #destination-info::before {
-    width: 85%;
-    height: 2px;
-  }
-  .destination-page #destination-info article {
-    height: 100%;
-    width: 40%;
-  }
-  .destination-page #destination-info article h5 {
-    font-size: 1rem;
-  }
-  .destination-page #destination-info article p {
-    font-size: 2rem;
-  }
 }
 
 @media (min-width: 1440px) {
@@ -612,46 +768,6 @@ ul li {
   }
   .technology-page {
     background-image: url("../../assets/technology/background-technology-desktop.jpg");
-  }
-  .destination-page {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    justify-content: space-evenly;
-  }
-  .destination-page header {
-    justify-content: space-between;
-    width: 40%;
-    height: 70%;
-  }
-  .destination-page header h5 {
-    font-size: 1.8rem;
-    letter-spacing: 4px;
-  }
-  .destination-page header figure {
-    height: 80%;
-  }
-  .destination-page section {
-    width: 40%;
-    height: 70%;
-  }
-  .destination-page section ul {
-    justify-content: space-between;
-    width: 60%;
-    margin: 0;
-    height: 15%;
-  }
-  .destination-page section h2 {
-    font-size: 6rem;
-  }
-  .destination-page section .page-description {
-    margin: 0;
-  }
-  .destination-page #destination-info {
-    justify-content: flex-start;
-  }
-  .destination-page #destination-info::before {
-    right: auto;
   }
 }
 

@@ -15,27 +15,34 @@ const Crew = () => {
     <>
       {Object.keys(crewMember).length ? (
         <div className="crew-page page">
-          <h5 className="subheading-sm">Meet your crew</h5>
-          <figure>
-            <img src={crewMember.images.webp} alt="" />
-          </figure>
-          <div>
-            <ul>
-              {data.crew.map(member => {
-                console.log(`member`, member);
-                return (
-                  <li onClick={e => changeCrew(e)} name={member.name}>
-                    o
-                  </li>
-                );
-              })}
-            </ul>
-            <div id="crew-info">
-              <h5 className="subheading-lg">{crewMember.role}</h5>
-              <h2 className="subheading-lg">{crewMember.name}</h2>
-              <p className="page-description">{crewMember.bio}</p>
-            </div>
-          </div>
+          <header className="page-header">
+            <h5>
+              <span>02</span>Meet your crew
+            </h5>
+          </header>
+          <main>
+            <figure>
+              <img src={crewMember.images.webp} alt="" />
+            </figure>
+
+            <section>
+              <ul>
+                {data.crew.map(member => (
+                  <li
+                    className={`${
+                      currentCrew === member.name ? "current-crew" : ""
+                    }`}
+                    onClick={e => changeCrew(e)}
+                    name={member.name}></li>
+                ))}
+              </ul>
+              <div className="page-info">
+                <h5 className="subheading-b-w">{crewMember.role}</h5>
+                <h2>{crewMember.name}</h2>
+                <p>{crewMember.bio}</p>
+              </div>
+            </section>
+          </main>
         </div>
       ) : (
         <h2>Loading...</h2>
