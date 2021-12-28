@@ -40,7 +40,6 @@ const AppContextProvider = ({ children }) => {
   };
 
   const changeTechnology = e => {
-    console.log(`e.currentTarget`, e.currentTarget);
     const newTech = e.currentTarget.getAttribute("name");
     setCurrentTechnology(newTech);
   };
