@@ -1,6 +1,8 @@
 import React from "react";
+import { useAppContext } from "../../context";
 
 const Home = () => {
+  const { changePage } = useAppContext();
   return (
     <section className="home">
       <div>
@@ -15,7 +17,9 @@ const Home = () => {
           </p>
         </article>
         <div className="btn-container">
-          <button>Explore</button>
+          <button name="destination" onClick={e => changePage(e)}>
+            Explore
+          </button>
         </div>
       </div>
     </section>
