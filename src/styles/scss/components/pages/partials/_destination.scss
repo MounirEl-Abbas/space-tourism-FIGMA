@@ -1,0 +1,154 @@
+/* Unique to Destination Page */
+.destination-page {
+  height: 120vh;
+  .page-header {
+    height: 12%;
+    align-items: flex-end;
+  }
+  main {
+    height: 85%;
+  }
+  figure {
+    height: 40%;
+  }
+  section {
+    height: 60%;
+  }
+  .page-info {
+    height: 90%;
+    h2 {
+      height: 15%;
+    }
+    p {
+      height: 40%;
+    }
+
+    div {
+      position: relative;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      &::before {
+        content: "";
+        height: 1px;
+        width: 90%;
+        margin: auto;
+        position: absolute;
+        top: -1rem;
+        right: 0;
+        left: 0;
+        background-color: #979797;
+        opacity: 0.7;
+      }
+      article {
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h5 {
+          font-size: 1.4rem;
+        }
+        p {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+//Destination-page navigation
+.destination-page ul {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  max-width: 30rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  li {
+    height: 80%;
+  }
+  .current-destination {
+    border-bottom: 3px solid $white;
+    color: $white;
+  }
+}
+
+@media (min-width: 768px) {
+  //Unique to Destination Page
+
+  .destination-page {
+    main {
+      justify-content: space-around;
+    }
+    figure {
+      height: 30%;
+    }
+    .page-info {
+      h2 {
+        height: 20%;
+      }
+      p {
+        height: 30%;
+      }
+      div {
+        height: 30%;
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        &::before {
+          top: 1rem;
+        }
+        article {
+          h5 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    ul {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .destination-page {
+    main {
+      align-items: center;
+      height: 70%;
+
+      figure {
+        max-height: 30rem;
+      }
+    }
+    section {
+      justify-content: space-evenly;
+      max-height: 30rem;
+      ul {
+        margin: 0;
+        justify-content: space-between;
+        width: 50%;
+      }
+      .page-info {
+        height: 90%;
+        h2 {
+          font-size: 6rem;
+        }
+        div {
+          margin: 0;
+          justify-content: space-between;
+          width: 70%;
+          &:before {
+            width: 120%;
+          }
+        }
+      }
+    }
+  }
+}
