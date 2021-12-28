@@ -408,6 +408,7 @@ ul li {
 .page-header span {
   opacity: 0.5;
   padding-right: 0.8rem;
+  font-weight: 900;
 }
 
 .page-info {
@@ -502,6 +503,68 @@ ul li {
   justify-content: space-evenly;
 }
 
+@media (min-width: 768px) {
+  .page .page-header {
+    height: 15%;
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+  .page .page-info > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page {
+    align-items: center;
+    justify-content: center;
+  }
+  .page .page-header {
+    width: 100%;
+    height: 20%;
+    padding-left: 8%;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .page .page-header h5,
+  .page .page-header h5 > span {
+    font-size: 1.6rem;
+  }
+  .page main {
+    height: 60%;
+    width: 100%;
+    flex-direction: row;
+  }
+  .page main figure,
+  .page main picture {
+    width: 50%;
+    height: 100%;
+    max-height: 40rem;
+  }
+  .page main figure img:not(#tech-pic),
+  .page main picture img:not(#tech-pic) {
+    width: 70%;
+    height: 100%;
+  }
+  .page main section {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+  }
+  .page main section .page-info {
+    align-items: flex-start;
+  }
+  .page main section .page-info h2 {
+    font-size: 3rem;
+  }
+  .page main section .page-info p {
+    margin: 0;
+  }
+}
+
 /* Unique to Destination Page */
 .destination-page {
   height: 120vh;
@@ -591,6 +654,73 @@ ul li {
   color: #fff;
 }
 
+@media (min-width: 768px) {
+  .destination-page main {
+    justify-content: space-around;
+  }
+  .destination-page figure {
+    height: 30%;
+  }
+  .destination-page .page-info h2 {
+    height: 20%;
+  }
+  .destination-page .page-info p {
+    height: 30%;
+  }
+  .destination-page .page-info div {
+    height: 30%;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .destination-page .page-info div::before {
+    top: 1rem;
+  }
+  .destination-page .page-info div article h5 {
+    font-size: 1.2rem;
+  }
+  .destination-page .page-info div article p {
+    font-size: 2rem;
+  }
+  .destination-page ul {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .destination-page main {
+    align-items: center;
+    height: 70%;
+  }
+  .destination-page main figure {
+    max-height: 30rem;
+  }
+  .destination-page section {
+    justify-content: space-evenly;
+    max-height: 30rem;
+  }
+  .destination-page section ul {
+    margin: 0;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .destination-page section .page-info {
+    height: 90%;
+  }
+  .destination-page section .page-info h2 {
+    font-size: 6rem;
+  }
+  .destination-page section .page-info div {
+    margin: 0;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .destination-page section .page-info div:before {
+    width: 120%;
+  }
+}
+
 /* Unique to Crew Page */
 .crew-page {
   position: relative;
@@ -673,6 +803,66 @@ ul li {
   opacity: 1;
 }
 
+@media (min-width: 768px) {
+  .crew-page main {
+    height: 90%;
+  }
+  .crew-page main figure {
+    order: 1;
+  }
+  .crew-page main section ul {
+    order: 1;
+  }
+  .crew-page main .page-info {
+    justify-content: center;
+  }
+  .crew-page main .page-info h5 {
+    height: 10%;
+  }
+  .crew-page main .page-info h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+  }
+  .crew-page main .page-info p {
+    height: 30%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .crew-page {
+    justify-content: flex-end;
+  }
+  .crew-page main {
+    height: 70%;
+  }
+  .crew-page main section {
+    padding-left: 8%;
+  }
+  .crew-page main section ul {
+    margin: 0;
+    height: 10%;
+    justify-content: space-between;
+    width: 22%;
+  }
+  .crew-page main section .page-info {
+    height: 70%;
+  }
+  .crew-page main section .page-info h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .crew-page main section .page-info h2 {
+    height: 15%;
+  }
+  .crew-page main section .page-info p {
+    width: 75%;
+    justify-content: center;
+  }
+}
+
 /* Unique to Technology Page */
 .technology-page picture {
   height: 35%;
@@ -732,81 +922,44 @@ ul li {
 }
 
 @media (min-width: 768px) {
-  .page .page-header {
-    height: 15%;
-    justify-content: flex-start;
-    padding-left: 2rem;
+  .technology-page picture {
+    height: 45%;
   }
-  .page .page-info > p {
-    font-size: 1.2rem;
+  .technology-page section {
+    height: 50%;
   }
-  .destination-page main {
-    justify-content: space-around;
+  .technology-page .page-info {
+    height: 75%;
   }
-  .destination-page figure {
-    height: 30%;
+}
+
+@media (min-width: 1440px) {
+  .technology-page main picture {
+    order: 1;
+    width: 40%;
   }
-  .destination-page .page-info h2 {
-    height: 20%;
-  }
-  .destination-page .page-info p {
-    height: 30%;
-  }
-  .destination-page .page-info div {
-    height: 30%;
+  .technology-page main section {
     flex-direction: row;
-    width: 80%;
-    margin: 0 auto;
     align-items: center;
-  }
-  .destination-page .page-info div::before {
-    top: 1rem;
-  }
-  .destination-page .page-info div article h5 {
-    font-size: 1.2rem;
-  }
-  .destination-page .page-info div article p {
-    font-size: 2rem;
-  }
-  .destination-page ul {
-    font-size: 1.4rem;
-  }
-  .crew-page main {
-    height: 90%;
-  }
-  .crew-page main figure {
-    order: 1;
-  }
-  .crew-page main section ul {
-    order: 1;
-  }
-  .crew-page main .page-info {
     justify-content: center;
+    padding-left: 8%;
   }
-  .crew-page main .page-info h5 {
+  .technology-page main section ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    width: 20%;
+    margin: 5rem 1rem auto 0;
+  }
+  .technology-page main section .page-info {
+    width: 80%;
+  }
+  .technology-page main section .page-info h5 {
+    font-size: 1rem;
+  }
+  .technology-page main section .page-info h2 {
     height: 10%;
   }
-  .crew-page main .page-info h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20%;
-  }
-  .crew-page main .page-info p {
-    height: 30%;
-  }
-}
-
-.technology-page picture {
-  height: 45%;
-}
-
-.technology-page section {
-  height: 50%;
-}
-
-.technology-page .page-info {
-  height: 75%;
 }
 
 /* Handle background image changes */
