@@ -31,7 +31,7 @@ const Destination = () => {
 
             <section>
               <ul className="subheading-bc-b">
-                {data.destinations.map(dest => (
+                {data.destinations.map((dest, index) => (
                   <li
                     className={`${
                       currentDestination === dest.name
@@ -39,7 +39,8 @@ const Destination = () => {
                         : ""
                     }`}
                     onClick={e => changeDestination(e)}
-                    name={dest.name}>
+                    name={dest.name}
+                    key={index}>
                     {dest.name}
                   </li>
                 ))}

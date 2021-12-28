@@ -27,13 +27,14 @@ const Crew = () => {
 
             <section>
               <ul>
-                {data.crew.map(member => (
+                {data.crew.map((member, index) => (
                   <li
                     className={`${
                       currentCrew === member.name ? "current-crew" : ""
                     }`}
                     onClick={e => changeCrew(e)}
-                    name={member.name}></li>
+                    name={member.name}
+                    key={index}></li>
                 ))}
               </ul>
               <div className="page-info">

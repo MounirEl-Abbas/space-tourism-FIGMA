@@ -41,7 +41,8 @@ const Technology = () => {
                         : ""
                     }`}
                     onClick={e => changeTechnology(e)}
-                    name={tech.name}>
+                    name={tech.name}
+                    key={index}>
                     {index + 1}
                   </li>
                 ))}
